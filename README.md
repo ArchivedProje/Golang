@@ -128,5 +128,6 @@ func main() {
 	fmt.Println(a &^ b) // a and not b = 00001010 & 11110011 = 00000010 = 2
 	fmt.Println(a |^ b) // a or not b =  00001010 | 11110011 = 11111011 = 251
 	fmt.Println(a ^^ b) // a xor not b = 00001010 ^ 11110011 = 11111001 = 249
+	fmt.Println(a ^^^ b) // a xor (^^ b) = a xor (not not b) = a xor b = 6
 }
 ```
