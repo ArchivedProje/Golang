@@ -113,3 +113,20 @@ func main() {
 }
 ```
 _Output - CE_
+### Bitwise operations
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var a uint8 = 10 // 00001010
+	var b uint8 = 12 // 00001100
+	fmt.Println(a & b) // a and b = 00001000 = 8
+	fmt.Println(a | b) // a or b = 00001110 = 14
+	fmt.Println(a ^ b) // a xor b = 00000110 = 6
+	fmt.Println(a &^ b) // a and not b = 00001010 & 11110011 = 00000010 = 2
+	fmt.Println(a |^ b) // a or not b =  00001010 | 11110011 = 11111011 = 251
+	fmt.Println(a ^^ b) // a xor not b = 00001010 ^ 11110011 = 11111001 = 249
+}
+```
