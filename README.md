@@ -122,6 +122,7 @@ import "fmt"
 func main() {
 	var a uint8 = 10 // 00001010
 	var b uint8 = 12 // 00001100
+	fmt.Println(^a) // not a = 11110101 = 245
 	fmt.Println(a & b) // a and b = 00001000 = 8
 	fmt.Println(a | b) // a or b = 00001110 = 14
 	fmt.Println(a ^ b) // a xor b = 00000110 = 6
@@ -129,5 +130,7 @@ func main() {
 	fmt.Println(a |^ b) // a or not b =  00001010 | 11110011 = 11111011 = 251
 	fmt.Println(a ^^ b) // a xor not b = 00001010 ^ 11110011 = 11111001 = 249
 	fmt.Println(a ^^^ b) // a xor (^^ b) = a xor (not not b) = a xor b = 6
+	fmt.Println(a << 3) // a << 3 = 00001010 << 3 = 00001010 = 80
+	fmt.Println(b >> 5) // b >> 5 = 00001100 >> 5 = 00000000 = 0
 }
 ```
