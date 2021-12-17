@@ -76,3 +76,19 @@ func main() {
 }
 ```
 _Output - CE_
+
+**All unitialized variables have a zero value**
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var n bool
+	var i int
+	var j float32
+	var k complex64
+	fmt.Print(n, i, j, k)
+}
+```
+_Output - false 0 0 (0+0i) 0_
