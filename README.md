@@ -92,3 +92,24 @@ func main() {
 }
 ```
 _Output - false 0 0 (0+0i) 0_
+
+**You can only apply math operations to the same types**
+```go
+func main() {
+	a := 10
+	b := 12
+	c := b - a
+	fmt.Printf("%v %T\n%v %T\n%v %T", a, a, b, b, c, c)
+}
+```
+_Output - 10 int 12 int 2 int_
+
+```go
+func main() {
+	var a uint8 = 10
+	b := 12
+	c := b - a
+	fmt.Printf("%v %T\n%v %T\n%v %T", a, a, b, b, c, c)
+}
+```
+_Output - CE_
