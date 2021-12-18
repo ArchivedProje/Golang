@@ -156,6 +156,7 @@ func main() {
 }
 ```
 _Output - this is a string string 16
+
 	  This is a string []int32 16_
 	 
 ### Bitwise operations
