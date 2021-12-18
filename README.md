@@ -156,7 +156,8 @@ func main() {
 	fmt.Printf("%v %T %v\n%v %T %v", s, s, len(s), string(r), r, len(r))
 }
 ```
-_Output - 
+_Output -
+
 this is a string string 16
 
 This is a string []int32 16_
