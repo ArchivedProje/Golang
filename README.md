@@ -127,6 +127,19 @@ func main() {
 }
 ```
 _Output - 1.34e+11 1.34e+11 true_
+
+**Strings are immutable**
+```go
+package main
+
+import "fmt"
+
+func main() {
+	s := "this is a string"
+	s[2] = 's'
+}
+```
+_Output - CE_
 ### Bitwise operations
 ```go
 package main
