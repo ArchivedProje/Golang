@@ -113,6 +113,20 @@ func main() {
 }
 ```
 _Output - CE_
+
+**Exponential notation**
+```go
+package main
+
+import "fmt"
+
+func main() {
+	a := 13.4e10
+	b := 13.4E10
+	fmt.Print(a, b, a == b)
+}
+```
+_Output - 1.34e+11 1.34e+11 true_
 ### Bitwise operations
 ```go
 package main
