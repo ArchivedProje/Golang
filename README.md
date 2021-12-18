@@ -142,6 +142,7 @@ func main() {
 _Output - CE_
 
 **String vs []rune()**
+
 String value is a read-only byte slice. And, a string literal is encoded in utf-8. Each char in string actually takes 1 ~ 3 bytes, while each rune takes 4 bytes.
 ```go
 package main
@@ -155,9 +156,10 @@ func main() {
 	fmt.Printf("%v %T %v\n%v %T %v", s, s, len(s), string(r), r, len(r))
 }
 ```
-_Output - this is a string string 16
+_Output - 
+this is a string string 16
 
-	  This is a string []int32 16_
+This is a string []int32 16_
 	 
 ### Bitwise operations
 ```go
