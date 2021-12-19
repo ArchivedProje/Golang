@@ -272,3 +272,18 @@ func main() {
 }
 ```
 _Output - 13 5 6_
+
+```go
+const (
+	_  = iota
+	KB = 1 << (10 * iota)
+	MB
+	GB
+)
+
+func main() {
+	fileSize := 12345600000.
+	fmt.Printf("%.2fKB\n%.2fMB\n%.2fGB", fileSize/KB, fileSize/MB, fileSize/GB)
+}
+```
+_Output - 12056250.00KB 11773.68MB 11.50GB_
