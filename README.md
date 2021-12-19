@@ -222,6 +222,7 @@ func main() {
 _Output - 1613_
 
 **Enumerated consts**
+**Iota scoped to a constant block**
 ```go
 const (
 	a = iota
@@ -241,4 +242,18 @@ func main() {
 }
 ```
 _Output - 0 1 2 0 0_
-**Iota scoped to a constant block**
+
+```go
+const (
+	_ = iota + 12
+	a
+	b
+	c
+)
+
+
+func main() {
+	fmt.Println(a, b, c)
+}
+```
+_Output - 13 14 15_
