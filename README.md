@@ -156,11 +156,11 @@ func main() {
 	fmt.Printf("%v %T %v\n%v %T %v", s, s, len(s), string(r), r, len(r))
 }
 ```
-_Output -
+Output -
 
 this is a string string 16
 
-This is a string []int32 16_
+This is a string []int32 16
 	 
 ### Bitwise operations
 ```go
@@ -183,3 +183,20 @@ func main() {
 	fmt.Println(b >> 5) // b >> 5 = 00001100 >> 5 = 00000000 = 0
 }
 ```
+### Const key-word
+```go
+func main() {
+	const myConst uint = 13
+	fmt.Printf("%v %T", myConst, myConst)
+}
+```
+_Output - 13 uint_
+
+**Const values has to be assigned at compile time**
+```go
+func main() {
+	const myConst = math.Exp(1.23)
+	fmt.Printf("%v %T", myConst, myConst)
+}
+```
+_Output - CE_
