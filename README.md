@@ -200,3 +200,13 @@ func main() {
 }
 ```
 _Output - CE_
+
+**Arrays are always going to be variable**
+```go
+func main() {
+	s := "some string"
+	const myConst = []byte(s)
+	fmt.Printf("%v %T", myConst, myConst)
+}
+```
+_Output - CE_
