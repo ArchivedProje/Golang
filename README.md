@@ -241,3 +241,4 @@ func main() {
 }
 ```
 _Output - 0 1 2 0 0_
+**Iota scoped to a constant block**
