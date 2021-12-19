@@ -210,3 +210,13 @@ func main() {
 }
 ```
 _Output - CE_
+
+**Compiler is basically replacing every instance**
+```go
+func main() {
+	const a = 123 + 4
+	var b float64 = 12.7
+	fmt.Println(math.Ceil(a * b))
+}
+```
+_Output - 1613_
