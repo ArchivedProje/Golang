@@ -220,3 +220,24 @@ func main() {
 }
 ```
 _Output - 1613_
+
+**Enumerated consts**
+```go
+const (
+	a = iota
+	b
+	c
+)
+
+const (
+	d = iota
+)
+
+func main() {
+	const (
+		e = iota
+	)
+	fmt.Println(a, b, c, d, e)
+}
+```
+_Output - 0 1 2 0 0_
