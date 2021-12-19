@@ -257,3 +257,18 @@ func main() {
 }
 ```
 _Output - 13 14 15_
+
+```go
+const (
+	_ = iota + 12
+	a
+	b = iota + 3
+	c
+)
+
+
+func main() {
+	fmt.Println(a, b, c)
+}
+```
+_Output - 13 5 6_
