@@ -370,7 +370,7 @@ _Output - [red black yellow] 3 [red black yellow] 3_
 ```go
 func main() {
 	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	b := a[:]
+	b := a[:] // this is a slice
 	c := a[3:]
 	d := a[:6]
 	e := a[4:6]
@@ -382,8 +382,72 @@ func main() {
 }
 ```
 Output -
+
 [1 2 3 4 5 6 7 8 9 10]
+
 [1 2 3 4 5 6 7 8 9 10]
+
 [4 5 6 7 8 9 10]
+
 [1 2 3 4 5 6]
+
 [5 6]
+
+```go
+func main() {
+	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	b := a[:]
+	c := a[3:]
+	d := a[:6]
+	e := a[4:6]
+	a[2] = -1
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
+	fmt.Println(e)
+}
+```
+Output -
+
+[1 2 -1 4 5 6 7 8 9 10]
+
+[1 2 -1 4 5 6 7 8 9 10]
+
+[4 5 6 7 8 9 10]
+
+[1 2 -1 4 5 6]
+
+[5 6]
+
+```go
+func main() {
+	a := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10} // watch carefully
+	b := a[:] // it's also a slice
+	c := a[3:]
+	d := a[:6]
+	e := a[4:6]
+	f := a // but it's an array
+	a[2] = -1
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
+	fmt.Println(e)
+	fmt.Println(f)
+}
+```
+_Output -
+
+
+[1 2 -1 4 5 6 7 8 9 10]
+
+[1 2 -1 4 5 6 7 8 9 10]
+
+[4 5 6 7 8 9 10]
+
+[1 2 -1 4 5 6]
+
+[5 6]
+
+[1 2 3 4 5 6 7 8 9 10]
