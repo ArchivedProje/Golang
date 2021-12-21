@@ -465,3 +465,42 @@ func main() {
 }
 ```
 _Output - [0 0 0] 3 3_
+
+### With 3 params
+#### Syntax
+**In this case size and capactiy are similar to vec.size() and vec.capacity()**
+```go
+	make([]Type, size, capacity)
+```
+
+```go
+func main() {
+	a := make([]int, 4, 10)
+	fmt.Println(a, len(a), cap(a))
+}
+```
+_Output - [0 0 0 0] 4 10_
+
+```go
+func main() {
+	a := make([]int, 4, 10)
+	a = append(a, 3, 4)
+	fmt.Println(a, len(a), cap(a))
+}
+```
+_Output - [0 0 0 0 3 4] 6 10_
+
+```go
+func main() {
+	a := make([]int, 4, 5)
+	a = append(a, 3)
+	fmt.Println(a, len(a), cap(a))
+	a = append(a, 4)
+	fmt.Println(a, len(a), cap(a))
+}
+```
+Output -
+
+[0 0 0 0 3] 5 5
+
+[0 0 0 0 3 4] 6 10
