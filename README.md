@@ -355,7 +355,7 @@ func main() {
 _Output - [red black yellow] 3 [red black yellow] 3_
 
 ## Slices
-
+**Slices are pointing at the same data**
 ```go
 func main() {
 	colors := []string{"red", "green", "yellow"}
