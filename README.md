@@ -287,3 +287,45 @@ func main() {
 }
 ```
 _Output - 12056250.00KB 11773.68MB 11.50GB_
+
+## Arrays
+### Syntax
+```go
+var name = [size]Type{}
+```
+```go
+func main() {
+	colors := [3]string{"red", "green", "yellow"}
+	fmt.Print(colors)
+}
+```
+or
+```go
+func main() {
+	colors := [...]string{"red", "green", "yellow"}
+	fmt.Print(colors)
+}
+```
+or
+```go
+func main() {
+	var colors [3]string
+	colors[0] = "red"
+	colors[1] = "green"
+	colors[2] = "yellow"
+	fmt.Print(colors)
+}
+```
+_Output - [red green yellow]_
+
+**len() returns the size of an array**
+```go
+func main() {
+	var colors [3]string
+	colors[0] = "red"
+	colors[1] = "green"
+	colors[2] = "yellow"
+	fmt.Print(colors, len(colors))
+}
+```
+_Output - [red green yellow] 3_
