@@ -353,3 +353,16 @@ func main() {
 }
 ```
 _Output - [red black yellow] 3 [red black yellow] 3_
+
+## Slices
+
+```go
+func main() {
+	colors := []string{"red", "green", "yellow"}
+	newColors := colors
+	newColors[1] = "black"
+	fmt.Println(colors, len(colors))
+	fmt.Println(newColors, len(newColors))
+}
+```
+_Output - [red black yellow] 3 [red black yellow] 3_
