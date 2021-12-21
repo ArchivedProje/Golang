@@ -381,7 +381,7 @@ func main() {
 	fmt.Println(e)
 }
 ```
-Output -
+Output
 
 [1 2 3 4 5 6 7 8 9 10]
 
@@ -408,7 +408,7 @@ func main() {
 	fmt.Println(e)
 }
 ```
-Output -
+Output
 
 [1 2 -1 4 5 6 7 8 9 10]
 
@@ -437,7 +437,7 @@ func main() {
 	fmt.Println(f)
 }
 ```
-Output -
+Output
 
 [1 2 -1 4 5 6 7 8 9 10]
 
@@ -499,8 +499,42 @@ func main() {
 	fmt.Println(a, len(a), cap(a))
 }
 ```
-Output -
+Output
 
 [0 0 0 0 3] 5 5
 
 [0 0 0 0 3 4] 6 10
+
+## Append function
+### Syntax
+```go
+	append(slice []Type, elems ...Type)
+```
+### Examples
+```go
+func main() {
+	a := []int{1, 2, 3, 4}
+	a = append(a, 5)
+	fmt.Println(a)
+}
+```
+_Output - [1 2 3 4 5]_
+
+```go
+func main() {
+	a := []int{1, 2, 3, 4}
+	a = append(a, 5, -3, 2, 4)
+	fmt.Println(a)
+}
+```
+_Output - [1 2 3 4 5 -3 2 4]_
+
+```go
+func main() {
+	a := []int{1, 2, 3, 4}
+	b := []int{-1, -2, -3, -4}
+	a = append(a, b...)
+	fmt.Println(a)
+}
+```
+_Output - [1 2 3 4 -1 -2 -3 -4]_
