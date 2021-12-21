@@ -437,8 +437,7 @@ func main() {
 	fmt.Println(f)
 }
 ```
-_Output -
-
+Output -
 
 [1 2 -1 4 5 6 7 8 9 10]
 
@@ -451,3 +450,18 @@ _Output -
 [5 6]
 
 [1 2 3 4 5 6 7 8 9 10]
+
+## Make function
+### With 2 params
+#### Syntax
+```go
+	make([]Type, size)
+```
+
+```go
+func main() {
+	a := make([]int, 3)
+	fmt.Println(a, len(a), cap(a))
+}
+```
+_Output - [0 0 0] 3 3_
