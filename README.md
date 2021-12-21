@@ -366,3 +366,24 @@ func main() {
 }
 ```
 _Output - [red black yellow] 3 [red black yellow] 3_
+
+```go
+func main() {
+	a := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	b := a[:]
+	c := a[3:]
+	d := a[:6]
+	e := a[4:6]
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
+	fmt.Println(e)
+}
+```
+Output -
+[1 2 3 4 5 6 7 8 9 10]
+[1 2 3 4 5 6 7 8 9 10]
+[4 5 6 7 8 9 10]
+[1 2 3 4 5 6]
+[5 6]
