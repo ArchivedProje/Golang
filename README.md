@@ -384,13 +384,9 @@ func main() {
 Output
 
 [1 2 3 4 5 6 7 8 9 10]
-
 [1 2 3 4 5 6 7 8 9 10]
-
 [4 5 6 7 8 9 10]
-
 [1 2 3 4 5 6]
-
 [5 6]
 
 ```go
@@ -411,13 +407,9 @@ func main() {
 Output
 
 [1 2 -1 4 5 6 7 8 9 10]
-
 [1 2 -1 4 5 6 7 8 9 10]
-
 [4 5 6 7 8 9 10]
-
 [1 2 -1 4 5 6]
-
 [5 6]
 
 ```go
@@ -440,15 +432,10 @@ func main() {
 Output
 
 [1 2 -1 4 5 6 7 8 9 10]
-
 [1 2 -1 4 5 6 7 8 9 10]
-
 [4 5 6 7 8 9 10]
-
 [1 2 -1 4 5 6]
-
 [5 6]
-
 [1 2 3 4 5 6 7 8 9 10]
 
 ## Make function
@@ -502,7 +489,6 @@ func main() {
 Output
 
 [0 0 0 0 3] 5 5
-
 [0 0 0 0 3 4] 6 10
 
 ## Append function
@@ -538,3 +524,29 @@ func main() {
 }
 ```
 _Output - [1 2 3 4 -1 -2 -3 -4]_
+
+**Remove element from the middle**
+```go
+func main() {
+	a := []int{1, 2, 3, 4, 5}
+	a = append(a[:2], a[3:]...)
+	fmt.Println(a)
+}
+```
+_Output - [1 2 4 5]_
+
+**Be careful**
+```go
+func main() {
+	a := []int{1, 2, 3, 4, 5}
+	fmt.Println(a)
+	b := append(a[:2], a[3:]...)
+	fmt.Println(b)
+	fmt.Println(a)
+}
+```
+Output
+
+[1 2 3 4 5]
+[1 2 4 5]
+[1 2 4 5 5]
